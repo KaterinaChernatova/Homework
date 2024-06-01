@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let userDigit = prompt("Введіть тризначне число:");
+      if (userDigit.length !== 3 || isNaN(Number(userDigit))) {
+        alert("Будь ласка, введіть коректне тризначне число.");
+      } else {
+        let firstDigit = Number(userDigit[0]);
+        let secondDigit = Number(userDigit[1]);
+        let thirdDigit = Number(userDigit[2]);
+
+        if (firstDigit == secondDigit && secondDigit == thirdDigit) {
+          alert("Всі цифри у числі однакові.");
+        } else if (
+          firstDigit == secondDigit ||
+          secondDigit == thirdDigit ||
+          thirdDigit == firstDigit
+        ) {
+          alert("Серед числа є однакові цифри.");
+        } else {
+          alert("Всі числа різні.");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
