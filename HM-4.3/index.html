@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+
+<body>
+    <script>
+        let yearOfBirth = prompt("Якого Ви року народження?");
+        if (yearOfBirth === null) {
+            alert("Шкода, що Ви не захотіли ввести свою дату народження.");    
+        }
+
+        let userCity = prompt("З якого ви міста?");
+        if (userCity === null) {
+            alert("Шкода, що Ви не захотіли ввести своє місто.");   
+        }
+
+        let userSport = prompt("Який ваш улюблений вид спорту?");
+        if (userSport === null) {
+            alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту."); 
+        }
+
+        let currentYear = new Date().getFullYear();
+        let userAge = currentYear - yearOfBirth;
+
+        let messageCity = "";
+        if (userCity === "Київ") {
+            messageCity = "Ви живете у столиці України.";
+        } else if (userCity === "Вашингтон") {
+            messageCity = "Ви живете у столиці США.";
+        } else if (userCity === "Лондон") {
+            messageCity = "Ви живете у столиці Великої Британії.";
+        } else {
+            messageCity = "Ви живете у місті " + userCity + ".";
+        }
+
+        let sportMessage = "";
+        if (userSport.toLowerCase() === "футбол") {
+            sportMessage = "Круто! Хочеш стати як Ліонель Мессі?";
+        } else if (userSport.toLowerCase() === "баскетбол") {
+            sportMessage = "Круто! Хочеш стати як Майкл Джордан?";
+        } else if (userSport.toLowerCase() === "теніс") {
+            sportMessage = "Круто! Хочеш стати як Роджер Федерер?";
+        } else {
+            sportMessage = "Ваш улюблений вид спорту: " + userSport;
+        }
+
+        alert("Ваш вік: " + userAge + " років\n" + messageCity + "\n" + sportMessage);
+    </script>
+</body>
+
+</html>
