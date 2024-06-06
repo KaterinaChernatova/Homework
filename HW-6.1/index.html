@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function removeChars(str, charsToRemove) {
+            let result = '';
+            for (let char of str) {
+                if (!charsToRemove.includes(char)) {
+                    result += char;
+                }
+            }
+            return result;
+        }
+
+        let inputString = prompt("Введіть текст:");
+        let inputChars = prompt("Введіть символи для видалення через кому:").split(',');
+
+        let resultString = removeChars(inputString, inputChars);
+        console.log(`Результат: ${resultString}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
