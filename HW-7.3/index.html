@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function inputNumber() {
+        const maxIterations = 10;
+        let lastInput = null;
+    
+        for (let i = 0; i < maxIterations; i++) {
+            let userInput = prompt("Введіть число більше, ніж 100");
+            
+            let number = parseFloat(userInput);
+    
+            if (isNaN(number)) {
+                alert("Будь ласка, введіть допустиме число.");
+                continue;
+            }
+    
+            if (number > 100) {
+                lastInput = number;
+                console.log("Останнє введене число:", lastInput);
+                break;
+            } else {
+                alert("Число має бути більше 100. Спробуйте ще раз.");
+            }
+        }
+    
+        if (lastInput === null) {
+            console.log("Не було запроваджено жодного числа більше 100 за 10 спроб.");
+        } else {
+            console.log("Функцію завершено з останнім введеним числом:", lastInput);
+        }
+    }
+    
+ 
+     inputNumber();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
