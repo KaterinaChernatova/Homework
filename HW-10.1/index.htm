@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const User = {
+            name: 'Іван',
+            age: 25,
+            location: 'Київ, Україна',
+
+            getUserInfo() {
+                return `Ім'я: ${this.name}, Вік: ${this.age}, Місце проживання: ${this.location}`;
+            },
+
+            displayUserInfo() {
+                console.log(this.getUserInfo());
+            }
+        };
+
+        const userInfo = User.getUserInfo();
+        console.log(userInfo);
+
+        User.displayUserInfo();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

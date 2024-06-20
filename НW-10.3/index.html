@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const ContactBook = {
+            contacts: [
+                {
+                    name: 'Іван Петренко',
+                    phone: '+380123456789',
+                    email: 'ivan@example.com'
+                },
+                {
+                    name: 'Олена Коваленко',
+                    phone: '+380987654321',
+                    email: 'olena@example.com'
+                }
+            ],
+
+            findContactByName(name) {
+                return this.contacts.find(contact => contact.name === name) || 'Контакт не знайдено';
+            },
+
+            addContact(name, phone, email) {
+                if (this.contacts.some(contact => contact.name === name)) {
+                    return 'Контакт з таким ім\'ям вже існує';
+                }
+                this.contacts.push({ name, phone, email });
+                return 'Контакт додано успішно';
+            }
+        };
+
+        console.log(ContactBook.findContactByName('Іван Петренко'));
+        console.log(ContactBook.addContact('Марія Іванова', '+380654987321', 'maria@example.com'));
+        console.log(ContactBook.findContactByName('Марія Іванова'));
+        console.log(ContactBook.addContact('Іван Петренко', '+380111111111', 'newemail@example.com'));
+        console.log(ContactBook.contacts);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
