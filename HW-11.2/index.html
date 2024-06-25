@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зміна коліру тексту</title>
+<style>
+    #text-block {
+        padding: 20px;
+        margin: 20px;
+        font-size: 18px;
+        color: black; 
+    }
+</style>
+</head>
+<body>
+    <div id="text-block">
+        <p>Натисніть кнопку нижче, щоб змінити колір тексту.</p>
+    </div>
+    <button onclick="changeTextColor()">Змінити колір тексту</button>
+
+    <script>
+        function changeTextColor() {
+            const textBlock = document.getElementById('text-block');
+
+            const currentColor = textBlock.style.color;
+
+            if (currentColor === 'black' || currentColor === '') {
+                textBlock.style.color = 'purple';
+            } else {
+                textBlock.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>
