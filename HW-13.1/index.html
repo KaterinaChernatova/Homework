@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валидация формы</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+  <form id="helpForm">
+    <div class="container-help">
+      <h1 class="header">Ми були б раді вам допомогти</h1>
+      <input type="text" class="js-username" name="username" placeholder="Ім'я" required>
+      <div class="js-error-name error"></div>
+      <textarea name="comments" class="js-comments" rows="4" cols="50" placeholder="Повідомлення" required></textarea>
+      <div class="js-error-comments error"></div>
+    </div>
+    
+    <div class="container-answer">
+      <h2 class="subheader">Як відповісти вам?</h2>
+      <input type="tel" class="js-phone_number" name="phone_number" placeholder="Номер телефону" required>
+      <div class="js-error-phone error"></div>
+      <input type="email" class="js-email" name="email" placeholder="Email" required>
+      <div class="js-error-email error"></div>
+    </div>
+    
+    <button type="submit" class="submit-button">Отправить</button>
+  </form>  
+</body>
+</html>
+
