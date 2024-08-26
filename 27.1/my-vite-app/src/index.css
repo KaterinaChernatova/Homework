@@ -1,0 +1,27 @@
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+}
+
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
